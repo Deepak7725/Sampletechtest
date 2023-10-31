@@ -1,0 +1,319 @@
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    margin-right: 20px;
+    /* Text color */
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: transparent;
+    /* Initial color */
+    transition: background-color 0.3s, transform 0.3s;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition-timing-function: ease-in;
+    /* Initially no width */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    /* Change text color on hover */
+}
+
+.navbar-nav .nav-link:hover::after {
+    background-color: rgb(56, 177, 217);
+    /* Change background color on hover */
+    transform: scaleX(1);
+    animation: fadeIn 0.3s ease-out;
+    /* Expand the width on hover */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style for the image container */
+.image-container {
+    position: relative;
+    max-width: 100%;
+}
+
+/* Style for the image */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the text overlay */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    /* Background color with transparency */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Style for the additional text */
+.additional-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.support-text {
+    font-size: 40px;
+}
+
+.icon {
+    font-size: 55px;
+    /* Adjust icon size as needed */
+    text-align: center;
+}
+
+.custom-card {
+    height: 250px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    /* Add smooth transitions */
+}
+
+.custom-card:hover {
+    background-color: lightblue;
+    /* Change the background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add a box-shadow on hover */
+    transform: translateY(-18px);
+    /* Move the card slightly upward on hover */
+
+}
+
+.custom-button {
+    margin-top: auto;
+    /* Push the button to the bottom of the card */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+
+    /* Add mt-3 for the 3rd and 4th cards on mobile */
+    .custom-card:nth-child(3n+1) {
+        margin-top: 1.5rem;
+    }
+
+    .container.mt-4 {
+        padding: 3rem;
+    }
+
+}
+
+/* Media query for iPad screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Add mt-3 for the 3rd and 4th cards on iPad */
+    .custom-card:nth-child(3n+1) {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0;
+        /* Remove the margin between items */
+    }
+}
+
+.custom-button {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+.custom-button.active {
+    background-color: black;
+    color: white;
+}
+
+/* CSS for section visibility transition */
+.section-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Increase the height of the carousel */
+#carouselExampleCaptions {
+    height: 650px;
+    /* Set your desired height here */
+}
+
+/* Set the object-fit for images within the carousel */
+.carousel img {
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+
+/* .navbar-brand {
+            font-family: Avenir, Spoqa Han Sans;
+            
+        } */
+body {
+    font-family: 'Sen', sans-serif;
+}
+
+.modal-dialog {
+    position: relative;
+    top: 6%;
+    left: 15%;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.with-divider {
+    border-right: 1px solid #fff;
+}
+
+.custom-image-brighter {
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+}
+
+.custom-image-brighter:hover {
+    filter: brightness(1.2);
+}
+
+/* Custom Carousel Indicator Styles */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    top: 683px;
+    /* Adjust the vertical position as needed */
+    left: 36%;
+    /* Center the indicators horizontally */
+    transform: translateX(-50%);
+}
+
+/* Dark Carousel Indicators */
+.carousel-indicators button {
+    background-color: #444 !important;
+    /* Dark grey color for non-active indicators */
+    border: 1px solid#444 !important;
+    /* Border color for non-active indicators */
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    margin: 0 5px;
+    /* Adjust the horizontal spacing between indicators */
+}
+
+.carousel-indicators .active {
+    background-color: #000000 !important;
+    /* Change this to your desired active indicator color */
+}
+
+/* Hover Animation for Carousel Navigation Arrows */
+.carousel-prev,
+.carousel-next {
+    display: inline-block;
+    font-size: 25px !important;
+    font-weight: 800;
+    color: #000;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carousel-prev:hover {
+    transform: translateX(-7px);
+    /* Move the left arrow to the right on hover */
+}
+
+.carousel-next:hover {
+    transform: translateX(7px);
+    /* Move the right arrow to the left on hover */
+}
+
+.loader {
+    display: none;
+    border: 4px solid rgba(123, 123, 123, 0.3);
+    border-top: 4px solid #007BFF;
+    /* Change this to your desired loader color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    /* Adjust the animation duration as needed */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: transparent;
+    /* Background overlay for the loader */
+    color: #007bff;
+    /* Text color for the loader */
+    font-weight: bold;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(142, 142, 142, 0.5);
+    /* Semi-transparent black background */
+    z-index: 9998;
+    /* Above your content, but below the loader */
+    display: none;
+    /* Initially hidden */
+}
+
+.bg-white {
+    background-color: white !important;
+    transition: background-color 0.3s ease-in-out;
+    /* Add transition for background color change */
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out;
+    /* Add transition for background color change */
+}

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-white navbar-expand-lg position-fixed z-1 w-100 bg-light ps-5 pt-3 pb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bolder" href="#"><i class="fas fa-cog"></i> <span
+                    class="custom-nav-brand">Sample</span><span class="text-info">Tech</span></a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu">
+                <i class="bi bi-bar-chart-steps "></i>
+            </button>
+            <div class="collapse navbar-collapse pe-5" id="navbarNav">
+                <ul class="navbar-nav ms-auto pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#nexxfittsection" id="btnProduct"
+                            data-bs-toggle="modal" data-bs-target="#productModal">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#support">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#contact">Contact-us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#footer">About-us</a>
+                    </li>
+                    <!-- <a class="nav-link btn btn-outline-dark" href="#">
+                        <i class="fas fa-cog"></i>
+                    </a> -->
+                    <li class="nav-item">
+                        <a class="btn " href="#">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="overlay" class="overlay"></div>
+    <!-- <div id="loader" class="loader">
+    </div> -->
+    <div class="offcanvas text-dark offcanvas-start" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="#" class="nav-link active" aria-current="page">
+
+                        <i class="bi-house" width="32" height="32"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#nexxfittsection" class="nav-link ">
+                        <i class="bi-grid" width="32" height="32"></i>
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a href="#support" class="nav-link ">
+                        <i class="bi-tools" width="32" height="32"></i>
+                        Support
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link ">
+                        <i class="bi-people-fill" width="32" height="32"></i>
+                        Contact-us
+                    </a>
+                </li>
+                <li>
+                    <a href="#footer" class="nav-link ">
+                        <i class="bi-building" width="32" height="32"></i>
+                        About-us
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1" style="border-radius: 100%;width: 9px;height: 9px;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
+                style="border-radius: 100%;width: 9px;height: 9px;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
+                style="border-radius: 100%;width: 9px;height: 9px;"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active " data-bs-interval="2500">
+                <img src="./images/img3.jpg" class="d-block w-100" style="height:650px;" alt="...">
+                <div class="carousel-caption ">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="./images/img4.jpg" class="d-block w-100" style="height:650px;" alt="...">
+                <div class="carousel-caption ">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="./images/img5.jpg" class="d-block w-100" style="height:650px;" alt="...">
+                <div class="carousel-caption    ">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-xl-4"></div>
+            <div class="col-xl-4">
+                <div class="row m-2 text-center">
+                    <div class="col-3">
+                        <a class="carousel-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <i class="fa fa-angle-left p-3" style="font-size:25px !important;font-weight:800;"></i>
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <a id="toggleCarousel"><i id="toggleIcon" class="fa fa-pause m-1 p-3"></i></a>
+                    </div>
+                    <div class="col-4">
+                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button> -->
+                    </div>
+                    <div class="col-3">
+                        <a class="carousel-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <i class="fa fa-angle-right p-3" style="font-size: 25px !important;font-weight: 800;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4"></div>
+        </div>
+    </div>
+    <section id="fittnexx" class="section-transition mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-1 text-center">
+                    <button type="button"
+                        class="rounded-start rounded-end ps-5 pt-2 pb-2 pe-5 fs-6 custom-button active"
+                        id="btnNexx">NEXX360</button>
+                    <button type="button" class="rounded-start rounded-end me-2 ps-5 pe-5 pt-2 pb-2 fs-6 custom-button"
+                        id="btnFitt">FITT360</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nexxfittsection" class="section-transition p-5">
+        <div class="container-fluid p-md-5" id="nexxsection">
+            <div class="row">
+
+                <div class="col-xl-6 p-0">
+                    <video width="100%" height="100%" autoplay loop muted>
+                        <source src="./images/nexx3602.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-xl-6">
+                    <h2 class="text-center fw-normal m-0"><small>The NEXX360</small></h2>
+                    <h2 class="text-center fw-bold mb-2">is a wearable 360° CCTV.</h2>
+                    <p class="text-center text-black mb-3" style="font-size: small;">The NEXX360 is a wearable CCTV
+                        neck-band.
+                        <br>Create a blind spotless monitoring environment with
+                        the
+                        hands-free
+                        NEXX360 device.
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <img src="./images/360.svg" alt="">
+                            <p>360° <br> coverage</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/stable.svg" alt="">
+                            <p>Stable <br> performance</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/installation.svg" alt="">
+                            <p>Quick and easy<br> connection</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/5-g.svg" alt="">
+                            <p>Supports <br>LTE and 5G</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/neckband.svg" alt="">
+                            <p>Neck-band<br>form factor</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/live.svg" alt="">
+                            <p>Real-time<br> streaming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-none p-md-5" id="fittsection">
+            <div class="row">
+
+                <div class="col-xl-6 p-0">
+                    <video width="100%" height="100%" autoplay loop muted>
+                        <source src="./images/nexx3602.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-xl-6">
+                    <!-- <h2 class="text-center fw-normal m-0"><small>The NEXX360</small></h2> -->
+                    <h2 class="text-center fw-bold mb-2">FITT360 Neckband Camera.</h2>
+                    <p class="text-center text-black mb-3" style="font-size: small;">FITT360 is the world's first
+                        neckband type wearable 360° camera.
+                        <br>Video captured by its three cameras is automatically stitched and saved in a 360°
+                        format.
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <img src="./images/360.svg" alt="">
+                            <p>Continuous <br> Recording 60m</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/stable.svg" alt="">
+                            <p>USB C-Type <br> Charging and Data <br>Transfer</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/installation.svg" alt="">
+                            <p>Connectivity<br> Bluetooth, Wireless<br>LAN, GPS</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/5-g.svg" alt="">
+                            <p>App Integration <br>Android, iOS</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/neckband.svg" alt="">
+                            <p>Android, iOS<br>+ External Memory Card<br>Slot</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="./images/live.svg" alt="">
+                            <p>Youtube, Facebook<br> Live Streaming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="support" class="pb-5 section-transition">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Create an image container with the image -->
+                    <div class="image-container">
+                        <img src="./images/support-bg.jpg" alt="Support Image" class="img-fluid">
+                        <!-- Add the SUPPORT text as an overlay -->
+                        <div class="overlay-text">
+                            <h2 class="support-text font-weight-bold">SUPPORT</h2>
+                            <p class="additional-text text-left">we're here to help</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-white text-center mt-3">
+            <h2 class="text-dark">How can I <span class="text-info">help you?</span></h2>
+        </div>
+        <div class="container mt-4 py-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card shadow-lg custom-card">
+                        <div class="card-body text-center">
+                            <div class="icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <!-- Text below the icon -->
+                            <p class="mt-4">Quick and easy access to customer support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card shadow-lg custom-card">
+                        <div class="card-body text-center">
+                            <div class="icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <!-- Text below the icon -->
+                            <p class="mt-4">Explore manuals for information on maintenance, troubleshooting and
+                                technical
+                                specs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card  shadow-lg custom-card">
+                        <div class="card-body text-center">
+                            <div class="icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <!-- Text below the icon -->
+                            <p class="mt-4">Update drivers and automatically detect common hardware issues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card shadow-lg custom-card">
+                        <div class="card-body text-center">
+                            <div class="icon">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <!-- Text below the icon -->
+                            <p class="mt-4">We can help you find the best support options.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section-transition p-lg-5">
+        <div class="container p-5">
+            <div class="row">
+                <h2 class=" text-center mb-5">Contact<span class="text-info">-us</span></h2>
+                <div class="col-xl-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-">Category</label>
+                        <select class="form-select form-select-sm" aria-label="Small select example"
+                            id="exampleFormControlInput1" placeholder="name@example.com">
+                            <option selected></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label text-">Your name</label>
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example"
+                            id="exampleFormControlInput2">
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput3" class="form-label text-">Your email</label>
+                        <input class="form-control form-control-sm" type="email" aria-label=".form-control-sm example"
+                            id="exampleFormControlInput3">
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput4" class="form-label text-">Your language
+                            preference</label>
+                        <select class="form-select form-select-sm" aria-label="Small select example"
+                            id="exampleFormControlInput4" placeholder="name@example.com">
+                            <option selected></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-12 mb-3">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Your message</label>
+                        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Sign me up for newsletters
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-12 mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
+                        <label class="form-check-label" for="flexCheckChecked1">
+                            I agree to the privacy policy.
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-12 text-center">
+                    <button class="btn btn-outline-dark btn-sm">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="text-center section-transition">
+        <div class="container-fluid bg-dark text-white  p-3 p-lg-5">
+            <div class="row">
+                <div class="col-xl-6">
+                    <table class="table table-dark table-borderless text-start">
+                        <tbody>
+                            <tr>
+                                <th class="w-50">Sample<span class="text-info">Tech</span></th>
+                            </tr>
+                            <tr>
+                                <td class="w-50">330, Seongam-ro, Mapo-gu</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">Seoul, Republic of Korea | 418-88-00494</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xl-6">
+                    <table class="table table-dark table-borderless text-start">
+                        <tbody>
+                            <tr>
+                                <td class="w-50">Product</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">Support</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">About-us</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr>
+            <p class="m-0 text-start">© Copyright 2023 SampleTech</p>
+        </div>
+    </section>
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog "> <!-- Set the modal size to 'sm' for small -->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container p-4">
+                        <div class="row">
+                            <div class="col-6 with-divider">
+                                <a href="#NEXX360">
+                                    <img src="./images/fitt-360.png" alt="..." class="img-fluid custom-image-brighter">
+                                </a>
+
+                            </div>
+                            <div class="col-6">
+                                <a href="#NEXX360">
+                                    <img src="./images/fitt-360-security.png" alt="..."
+                                        class="img-fluid custom-image-brighter">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to handle navbar background
+            function handleNavbarBackground() {
+                const navbar = document.querySelector('.navbar');
+                const navLinks = document.querySelectorAll('.navbar .nav-link');
+                const navbarbrand = document.querySelector('.custom-nav-brand');
+                const scrollTop = window.scrollY;
+
+                if (scrollTop === 0) {
+                    navbar.classList.remove('bg-white');
+                    navbar.classList.add('bg-transparent');
+                    navbarbrand.classList.add('text-white');
+                    navLinks.forEach(navLink => navLink.classList.add('text-white'));
+                } else {
+                    navbar.classList.remove('bg-transparent');
+                    navbar.classList.add('bg-dark');
+                    // navLinks.forEach(navLink => navLink.classList.remove('text-white'));
+                    // navbarbrand.classList.remove('text-white');
+                }
+            }
+
+            // Add an event listener to handle background on scroll
+            window.addEventListener('scroll', handleNavbarBackground);
+            // Initial check
+            handleNavbarBackground();
+
+            $(".nav-link").click(function () {
+                // Remove "active" class from all links
+                $(".nav-link").removeClass("active");
+
+                // Add "active" class to the clicked link
+                $(this).addClass("active");
+            });
+            $('#btnNexx').click(function () {
+                $('#btnNexx').addClass('active');
+                $('#btnFitt').removeClass('active');
+                $('#nexxsection').removeClass('d-none');
+                $('#fittsection').addClass('d-none');
+            });
+
+            $('#btnFitt').click(function () {
+                $('#btnFitt').addClass('active');
+                $('#btnNexx').removeClass('active');
+                $('#nexxsection').addClass('d-none');
+                $('#fittsection').removeClass('d-none');
+            });
+            let isPlaying = true; // Initial state
+
+            // Get a reference to the carousel element
+            const carousel = $('#carouselExampleCaptions');
+
+            $('#toggleCarousel').on('click', function () {
+                const $toggleIcon = $('#toggleIcon');
+                if (isPlaying) {
+                    carousel.carousel('pause'); // Pause the carousel
+                    $toggleIcon.removeClass('fa-pause').addClass('fa-play');
+                } else {
+                    carousel.carousel('cycle'); // Start (continue) the carousel
+                    $toggleIcon.removeClass('fa-play').addClass('fa-pause');
+                }
+
+                isPlaying = !isPlaying; // Toggle the state
+            });
+        });
+        // Function to add the 'section-visible' class when a section enters the viewport
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target); // Stop observing once section is visible
+                }
+            });
+        }
+
+        // Create an Intersection Observer
+        const sectionObserver = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2 // Adjust this threshold as needed
+        });
+
+        // Observe the sections with the 'section-transition' class
+        document.querySelectorAll('.section-transition').forEach(section => {
+            sectionObserver.observe(section);
+        });
+        // // Function to show the loader
+        // function showLoader() {
+        //     document.getElementById('overlay').style.display = 'block';
+        //     document.getElementById('loader').style.display = 'block';
+        // }
+
+        // // Function to hide the loader
+        // function hideLoader() {
+        //     document.getElementById('overlay').style.display = 'none';
+        //     document.getElementById('loader').style.display = 'none';
+        // }
+
+        // // Add a click event listener to your button (you can modify 'yourButtonId' to match your button's ID)
+        // document.getElementById('btnNexx').addEventListener('click', function () {
+        //     showLoader(); // Show the loader when the button is clicked
+
+        //     // Simulate some time-consuming operation (replace this with your actual task)
+        //     setTimeout(function () {
+        //         // After your task is done, hide the loader
+        //         hideLoader();
+        //     }, 1000); // Adjust the timeout value as needed
+        // });
+        // document.getElementById('btnFitt').addEventListener('click', function () {
+        //     showLoader(); // Show the loader when the button is clicked
+
+        //     // Simulate some time-consuming operation (replace this with your actual task)
+        //     setTimeout(function () {
+        //         // After your task is done, hide the loader
+        //         hideLoader();
+        //     }, 1000); // Adjust the timeout value as needed
+        // });
+
+    </script>
+</body>
+
+</html>
